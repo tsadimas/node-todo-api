@@ -20,7 +20,6 @@ if (nconf.get('mongoDatabase')) {
 console.log(uri);
 
 
-//MongoClient.connect('mongodb://argiris:***REMOVED***@***REMOVED***/?authMechanism=SCRAM-SHA-1&authSource=***REMOVED***', (err,client) => {
 
     MongoClient.connect(uri, (err, client) => {
         if (err) {
@@ -28,7 +27,7 @@ console.log(uri);
         }
 
         console.log('Connected to MongoDB server');
-        const db = client.db('***REMOVED***');
+        const db = client.db('tsadimas');
         db.collection('Todos').insertOne({
                 text: 'Something to do',
                 completed: false
