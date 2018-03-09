@@ -14,7 +14,7 @@ var uri = `mongodb://${user}:${pass}@${host}:${port}`;
 if (nconf.get('mongoDatabase')) {
     uri = `${uri}/${nconf.get('mongoDatabase')}`;
 }
-console.log(uri);
+console.log(process.env.MONGODB_URI || uri);
 
 mongoose.Promise = global.Promise;
 mongoose.connect(uri);
