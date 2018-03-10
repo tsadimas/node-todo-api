@@ -12,8 +12,14 @@ const port = nconf.get('mongoPort');
 console.log(user);
 var uri = `mongodb://${user}:${pass}@${host}:${port}`;
 if (nconf.get('mongoDatabase')) {
+    if (process.env.NODE_ENV !== 'test') {
     uri = `${uri}/${nconf.get('mongoDatabase')}`;
+    } else {
+    uri = `${uri}/${nconf.get('mongoDatabase')}-test`;
+    }
 }
+
+console.log('NODE ENV',process.env.NODE_ENV);
 console.log(process.env.MONGODB_URI || uri);
 
 mongoose.Promise = global.Promise;
