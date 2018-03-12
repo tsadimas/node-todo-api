@@ -3,3 +3,4 @@ package-lock.json
 keys.json
 package.json.orig
 app.yaml
+server/config/config.json
