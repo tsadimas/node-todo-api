@@ -1,10 +1,15 @@
-Create a keys.json file in project root, adding
+Create a config/config.json file in project, adding
 
 ```javascript
 {
-  "mongoHost": "YOUR_MONGO_HOST",
-  "mongoPort": "YOUR_MONGO_PORT",
-  "mongoDatabase": "YOUR_MONGO_DB",
-  "mongoUser": "YOUR_MONGO_USERNAME",
-  "mongoPass": "YOUR_MONGO_PASSWORD"
+    "test": {
+        "PORT": 3000,
+        "JWT_SECRET": "YOUR-TEST-SECRET",
+        "MONGODB_URI": "mongodb://user:password@host:port/db-test"
+    },
+    "development": {
+        "PORT": 3000,
+        "JWT_SECRET": "YOUR-DEVELOPMENT-SECRET",
+        "MONGODB_URI": "mongodb://user:password@host:port/db-dev"
+    }
 }
