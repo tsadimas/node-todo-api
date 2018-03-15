@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const nconf = require('nconf');
 const fs = require('fs');
 const {MongoClient, ObjectID}= require('mongodb');
