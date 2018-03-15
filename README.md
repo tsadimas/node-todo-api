@@ -1,4 +1,4 @@
-Create a config/config.json file in project, adding
+Create a server/config/config.json file in project, adding
 
 ```javascript
 {
