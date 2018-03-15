@@ -13,3 +13,11 @@ Create a server/config/config.json file in project, adding
         "MONGODB_URI": "mongodb://user:password@host:port/db-dev"
     }
 }
+```
+To deploy in gCloud, add in app.yaml the following enviromental variables
+
+```yaml
+env_variables:
+    MONGODB_URI: "mongodb://user:password@host:port/db-prod"
+    JWT_SECRET: "YOUR-PRODUCTION-SECRET"
+```
